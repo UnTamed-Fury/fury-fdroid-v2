@@ -171,6 +171,8 @@ def check_abi_compliance(
     """
     Check if an asset complies with ABI policy.
 
+    Universal APKs (no ABI specified in filename) are always allowed.
+
     Args:
         asset: Asset dictionary
         abi_policy: ABI policy (arm_preferred, arm64_only)
@@ -181,13 +183,17 @@ def check_abi_compliance(
     filename = asset.get("name", "")
     abis = extract_abi_from_filename(filename)
 
+    # Universal APKs (no ABI in filename) are allowed
+    if not abis:
+        return (True, [])
+
     # Reject x86 builds
     if "x86" in abis or "x86_64" in abis:
         return (False, abis)
 
     # If arm64_only policy, require arm64-v8a
     if abi_policy == "arm64_only":
-        if abis and "arm64-v8a" not in abis:
+        if "arm64-v8a" not in abis:
             return (False, abis)
 
     return (True, abis)

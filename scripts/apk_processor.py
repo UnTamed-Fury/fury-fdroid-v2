@@ -16,21 +16,31 @@ from typing import Any, Optional
 import requests
 
 
-def download_apk(url: str, timeout: int = 300) -> tuple[str, int]:
-    """Download APK file to temporary location."""
-    try:
-        response = requests.get(url, timeout=timeout, stream=True)
-        response.raise_for_status()
-        fd, temp_path = tempfile.mkstemp(suffix=".apk")
-        total_size = 0
-        with os.fdopen(fd, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                if chunk:
-                    f.write(chunk)
-                    total_size += len(chunk)
-        return temp_path, total_size
-    except requests.RequestException as e:
-        raise RuntimeError(f"Failed to download APK: {e}") from e
+def download_apk(url: str, timeout: int = 300, retries: int = 3) -> tuple[str, int]:
+    """Download APK file to temporary location with retry logic."""
+    import time
+    last_error = None
+    
+    for attempt in range(retries):
+        try:
+            response = requests.get(url, timeout=timeout, stream=True)
+            response.raise_for_status()
+            fd, temp_path = tempfile.mkstemp(suffix=".apk")
+            total_size = 0
+            with os.fdopen(fd, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    if chunk:
+                        f.write(chunk)
+                        total_size += len(chunk)
+            return temp_path, total_size
+        except requests.RequestException as e:
+            last_error = e
+            if attempt < retries - 1:
+                time.sleep(2 ** attempt)  # Exponential backoff
+                continue
+            raise RuntimeError(f"Failed to download APK after {retries} attempts: {e}") from e
+    
+    raise RuntimeError(f"Failed to download APK: {last_error}") from last_error
 
 
 def compute_sha256(file_path: str) -> str:
