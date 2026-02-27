@@ -10,6 +10,7 @@ Automated ARM-only F-Droid repository powered by GitHub Actions.
 - **Version Retention**: Configurable number of versions to keep per app
 - **Non-blocking CI**: Single app failures don't block the entire repo
 - **No APK Storage**: Only metadata is stored, APKs are linked from GitHub Releases
+- **Fastlane Support**: Auto-fetches screenshots, descriptions, and changelogs from upstream repos
 
 ## Repository URL
 

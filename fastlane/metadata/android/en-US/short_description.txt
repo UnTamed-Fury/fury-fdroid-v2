@@ -1,0 +1,1 @@
+Automated ARM-only F-Droid repository with 60+ apps
