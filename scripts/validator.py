@@ -91,6 +91,9 @@ def validate_signature(
     """
     Validate signing certificate.
 
+    Note: Signing certificate extraction requires androguard or apksigner.
+    If not available, signature validation is skipped (warning only).
+
     Args:
         metadata: Extracted APK metadata
         cached_cert: Previously cached certificate (if any)
@@ -101,10 +104,11 @@ def validate_signature(
     """
     current_cert = metadata.get("signing_cert_sha256")
 
+    # Skip signature validation if cert not available (pyaxmlparser doesn't extract it)
     if not current_cert:
         return ValidationResult(
-            is_valid=False,
-            error_message="No signing certificate found in APK"
+            is_valid=True,
+            warning_message="Signing certificate not extracted (requires androguard/apksigner)"
         )
 
     if cached_cert and current_cert != cached_cert:
