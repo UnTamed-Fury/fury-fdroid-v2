@@ -77,10 +77,14 @@ def extract_apk_metadata(file_path: str) -> dict[str, Any]:
     Raises:
         RuntimeError: If extraction fails
     """
+    # Try androguard 4.x first, then fall back to 3.x
     try:
-        from androguard.core.bytecodes.apk import APK
+        from androguard.core.apk import APK  # androguard 4.x
     except ImportError:
-        raise RuntimeError("androguard is not installed - run: pip install androguard") from None
+        try:
+            from androguard.core.bytecodes.apk import APK  # androguard 3.x
+        except ImportError:
+            raise RuntimeError("androguard is not installed - run: pip install androguard") from None
 
     try:
         apk = APK(file_path)
@@ -187,10 +191,14 @@ def extract_metadata_from_bytes(apk_bytes: bytes) -> dict[str, Any]:
     Returns:
         Dictionary containing extracted metadata
     """
+    # Try androguard 4.x first, then fall back to 3.x
     try:
-        from androguard.core.bytecodes.apk import APK
+        from androguard.core.apk import APK  # androguard 4.x
     except ImportError:
-        raise RuntimeError("androguard is not installed") from None
+        try:
+            from androguard.core.bytecodes.apk import APK  # androguard 3.x
+        except ImportError:
+            raise RuntimeError("androguard is not installed") from None
 
     # Write to temp file for androguard (it requires file path)
     fd, temp_path = tempfile.mkstemp(suffix=".apk")
