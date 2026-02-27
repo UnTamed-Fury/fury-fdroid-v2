@@ -42,16 +42,16 @@ jobs:
 
       - name: Install dependencies
         run: |
-          # Install system dependencies
+          # Install system dependencies (aapt for APK parsing)
           sudo apt-get update
-          sudo apt-get install -y android-tools-base
+          sudo apt-get install -y aapt
           
           # Install Python dependencies
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
           # Verify aapt is available
-          aapt version || echo "aapt installed"
+          aapt version
 
       - name: Run F-Droid builder
         env:
