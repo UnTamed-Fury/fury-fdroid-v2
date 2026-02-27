@@ -73,6 +73,7 @@ def build_version_object(
             "size": metadata.get("size", 0),
         },
         "manifest": {
+            "packageName": metadata.get("package_name", ""),
             "versionName": metadata.get("version_name", ""),
             "versionCode": metadata.get("version_code", 0),
             "usesSdk": {
