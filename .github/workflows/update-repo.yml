@@ -44,8 +44,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install androguard
-          # Verify installation
-          python -c "from androguard.core.bytecodes.apk import APK; print('androguard OK')"
+          # Verify installation (androguard 4.x uses androguard.core.apk)
+          python -c "from androguard.core.apk import APK; print('androguard OK')" || \
+          python -c "from androguard.core.bytecodes.apk import APK; print('androguard 3.x OK')"
 
       - name: Run F-Droid builder
         env:
