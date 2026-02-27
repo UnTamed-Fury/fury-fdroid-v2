@@ -44,12 +44,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install androguard
+          # Verify installation
+          python -c "from androguard.core.bytecodes.apk import APK; print('androguard OK')"
 
       - name: Run F-Droid builder
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "=== Starting F-Droid Repo Build ==="
+          mkdir -p repo/icons
           python scripts/main.py 2>&1 | tee build.log
           echo "=== Build Complete ==="
 
