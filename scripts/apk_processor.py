@@ -117,9 +117,9 @@ def extract_apk_metadata(file_path: str) -> dict[str, Any]:
     version_name = apk.version_name
     version_code = apk.version_code
 
-    # Extract SDK versions
-    min_sdk = apk.min_sdk_version
-    target_sdk = apk.target_sdk_version
+    # Extract SDK versions (pyaxmlparser uses methods, not properties)
+    min_sdk = apk.get_min_sdk_version()
+    target_sdk = apk.get_target_sdk_version()
 
     # Extract permissions
     permissions = []
