@@ -1,16 +1,18 @@
 """
-APK metadata extraction using androguard.
+APK metadata extraction using lightweight tools.
 
-Extracts package information, version details, permissions,
-and signing certificates from APK files.
+Uses pyaxmlparser for manifest parsing instead of heavy androguard.
+Much faster installation and execution.
 """
 
 import hashlib
 import os
 import tempfile
+import zipfile
 from typing import Any, Optional
 
 import requests
+from pyaxmlparser import APK
 
 
 def download_apk(url: str, timeout: int = 300) -> tuple[str, int]:
@@ -64,9 +66,35 @@ def compute_sha256(file_path: str) -> str:
     return sha256_hash.hexdigest()
 
 
+def extract_native_code_from_apk(file_path: str) -> list[str]:
+    """
+    Extract native code ABIs by parsing lib/ directory in APK.
+
+    Args:
+        file_path: Path to APK file
+
+    Returns:
+        List of detected ABIs
+    """
+    abis = set()
+    try:
+        with zipfile.ZipFile(file_path, 'r') as zip_ref:
+            for filename in zip_ref.namelist():
+                if filename.startswith('lib/'):
+                    parts = filename.split('/')
+                    if len(parts) >= 2:
+                        abi = parts[1]
+                        # Filter valid ABIs
+                        if abi in ['arm64-v8a', 'armeabi-v7a', 'armeabi', 'x86', 'x86_64']:
+                            abis.add(abi)
+    except Exception:
+        pass
+    return list(abis)
+
+
 def extract_apk_metadata(file_path: str) -> dict[str, Any]:
     """
-    Extract metadata from APK file using androguard.
+    Extract metadata from APK file using pyaxmlparser.
 
     Args:
         file_path: Path to APK file
@@ -77,68 +105,36 @@ def extract_apk_metadata(file_path: str) -> dict[str, Any]:
     Raises:
         RuntimeError: If extraction fails
     """
-    # Try androguard 4.x first, then fall back to 3.x
-    try:
-        from androguard.core.apk import APK  # androguard 4.x
-    except ImportError:
-        try:
-            from androguard.core.bytecodes.apk import APK  # androguard 3.x
-        except ImportError:
-            raise RuntimeError("androguard is not installed - run: pip install androguard") from None
-
     try:
         apk = APK(file_path)
     except Exception as e:
-        raise RuntimeError(f"Failed to parse APK: {e}") from e
+        raise RuntimeError(f"Failed to parse APK: {e}") from None
 
     # Extract package information
-    package_name = apk.get_package()
+    package_name = apk.package
 
     # Extract version information
-    version_name = apk.get_androidversion_name()
-    version_code = apk.get_androidversion_code()
+    version_name = apk.version_name
+    version_code = apk.version_code
 
     # Extract SDK versions
-    min_sdk = apk.get_min_sdk_version()
-    target_sdk = apk.get_target_sdk_version()
+    min_sdk = apk.min_sdk_version
+    target_sdk = apk.target_sdk_version
 
     # Extract permissions
     permissions = []
     for perm in apk.get_permissions():
         permissions.append({"name": perm})
 
-    # Extract native code ABIs (androguard 4.x doesn't have get_native_code())
-    native_code = []
-    try:
-        # Try androguard 4.x method first
-        if hasattr(apk, 'get_native_code'):
-            native_code = apk.get_native_code() or []
-        else:
-            # Fallback: parse lib/ directory for androguard 4.x
-            abis = set()
-            for filename in getattr(apk, 'get_files', lambda: [])():
-                if filename.startswith('lib/'):
-                    parts = filename.split('/')
-                    if len(parts) >= 2:
-                        abis.add(parts[1])
-            native_code = list(abis)
-    except Exception:
-        pass
+    # Extract native code ABIs (parse lib/ directory)
+    native_code = extract_native_code_from_apk(file_path)
 
-    # Extract signing certificate
+    # Note: pyaxmlparser doesn't provide signing certificate
+    # For signature verification, would need apksigner or jarsigner
     signing_cert = None
-    try:
-        certificates = apk.get_certificates()
-        if certificates:
-            # Use the first certificate
-            cert = certificates[0]
-            # Get SHA256 fingerprint
-            signing_cert = hashlib.sha256(cert.get_der()).hexdigest()
-    except Exception:
-        pass
 
     return {
-        "package_name": package_name,
+        "package_name": package_name or "",
         "version_name": version_name or "",
         "version_code": version_code or 0,
         "min_sdk_version": min_sdk or 0,
@@ -206,16 +202,7 @@ def extract_metadata_from_bytes(apk_bytes: bytes) -> dict[str, Any]:
     Returns:
         Dictionary containing extracted metadata
     """
-    # Try androguard 4.x first, then fall back to 3.x
-    try:
-        from androguard.core.apk import APK  # androguard 4.x
-    except ImportError:
-        try:
-            from androguard.core.bytecodes.apk import APK  # androguard 3.x
-        except ImportError:
-            raise RuntimeError("androguard is not installed") from None
-
-    # Write to temp file for androguard (it requires file path)
+    # Write to temp file for pyaxmlparser (it requires file path)
     fd, temp_path = tempfile.mkstemp(suffix=".apk")
     try:
         with os.fdopen(fd, "wb") as f:
