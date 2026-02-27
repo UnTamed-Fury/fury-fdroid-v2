@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test files
+test_*.py
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# F-Droid repo generated files
+repo/index-v1.json
+repo/index-v2.json
+metadata_cache.json
+
+# Old/backup files
+*.yaml.bak
+*.yml.bak
+apps-old.yaml
+
+# Build artifacts
+*.apk
+*.apks

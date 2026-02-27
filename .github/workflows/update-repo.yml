@@ -1,0 +1,91 @@
+name: Update F-Droid Repo
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'apps.yaml'
+      - 'scripts/**'
+      - 'requirements.txt'
+      - '.github/workflows/update-repo.yml'
+
+# Prevent concurrent runs
+concurrency:
+  group: fdroid-repo-update
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: '3.11'
+
+jobs:
+  build:
+    name: Build F-Droid Repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install androguard
+
+      - name: Run F-Droid builder
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== Starting F-Droid Repo Build ==="
+          python scripts/main.py 2>&1 | tee build.log
+          echo "=== Build Complete ==="
+
+      - name: Show generated files
+        run: |
+          echo "=== Generated Files ==="
+          ls -la repo/
+          if [ -f repo/index-v2.json ]; then
+            echo "=== index-v2.json summary ==="
+            python3 -c "import json; d=json.load(open('repo/index-v2.json')); print(f'Packages: {len(d.get(\"packages\", {}))}')"
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add repo/
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: update F-Droid repo index [skip ci]"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
+          retention-days: 7
+
+      - name: Upload repo artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fdroid-repo
+          path: repo/
+          retention-days: 30

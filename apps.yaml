@@ -1,0 +1,1746 @@
+repo:
+  name:
+    en-US: Fury F-Droid Repo
+  description:
+    en-US: Automated ARM-only GitHub-based repository for Android apps
+  url: https://untamed-fury.github.io/fury-fdroid-v2
+  icon: /icons/icon.png
+  max_versions_default: 2
+apps:
+- logical_id: net_kdt_pojavlaunch_debug
+  github: PojavLauncherTeam/PojavLauncher
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - net.kdt.pojavlaunch.debug
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Gaming
+    - Minecraft
+    - Discontinued
+    license: Unknown
+    source_url: https://github.com/PojavLauncherTeam/PojavLauncher
+- logical_id: com_movtery_zalithlauncher
+  github: ZalithLauncher/ZalithLauncher
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.movtery.zalithlauncher
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Gaming
+    - Minecraft
+    license: Unknown
+    source_url: https://github.com/ZalithLauncher/ZalithLauncher
+- logical_id: com_movtery_zalithlauncher_v2
+  github: ZalithLauncher/ZalithLauncher2
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.movtery.zalithlauncher.v2
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Gaming
+    - Minecraft
+    - Alpha
+    license: Unknown
+    source_url: https://github.com/ZalithLauncher/ZalithLauncher2
+- logical_id: com_termux
+  github: FlutterGenerator/termux-monet
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.termux
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    license: Unknown
+    source_url: https://github.com/FlutterGenerator/termux-monet
+- logical_id: com_termux_api
+  github: termux/termux-api
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.termux.api
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    license: Unknown
+    source_url: https://github.com/termux/termux-api
+- logical_id: com_termux_window
+  github: termux/termux-float
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.termux.window
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    license: Unknown
+    source_url: https://github.com/termux/termux-float
+- logical_id: com_termux_style
+  github: termux/termux-styling
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.termux.style
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    license: Unknown
+    source_url: https://github.com/termux/termux-styling
+- logical_id: com_termux_x11
+  github: termux/termux-x11
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.termux.x11
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    - X11
+    license: Unknown
+    source_url: https://github.com/termux/termux-x11
+- logical_id: io_neoterm
+  github: NeoTerrm/NeoTerm
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - io.neoterm
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    license: Unknown
+    source_url: https://github.com/NeoTerrm/NeoTerm
+- logical_id: com_teixeira_vcspace
+  github: Visual-Code-Space/Visual-Code-Space
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.teixeira.vcspace
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Editor
+    license: Unknown
+    source_url: https://github.com/Visual-Code-Space/Visual-Code-Space
+- logical_id: com_rk_xededitor
+  github: Xed-Editor/Xed-Editor
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.rk.xededitor
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Editor
+    license: Unknown
+    source_url: https://github.com/Xed-Editor/Xed-Editor
+- logical_id: dev_imranr_obtainium_fdroid
+  github: ImranR98/Obtainium
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - dev.imranr.obtainium.fdroid
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - AppStore
+    license: Unknown
+    source_url: https://github.com/ImranR98/Obtainium
+- logical_id: com_machiav3lli_fdroid
+  github: NeoApplications/Neo-Store
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.machiav3lli.fdroid
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - AppStore
+    license: Unknown
+    source_url: https://github.com/NeoApplications/Neo-Store
+- logical_id: com_looker_droidify
+  github: Droid-ify/client
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.looker.droidify
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - AppStore
+    license: Unknown
+    source_url: https://github.com/Droid-ify/client
+- logical_id: eu_kanade_tachiyomi_yokai
+  github: null2264/yokai
+  release:
+    prefer_prerelease: true
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - eu.kanade.tachiyomi.yokai
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Manga
+    license: Unknown
+    source_url: https://github.com/null2264/yokai
+- logical_id: app_mihon
+  github: mihonapp/mihon
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - app.mihon
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Manga
+    license: Unknown
+    source_url: https://github.com/mihonapp/mihon
+- logical_id: app_anikku
+  github: komikku-app/anikku
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - app.anikku
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Anime
+    license: Unknown
+    source_url: https://github.com/komikku-app/anikku
+- logical_id: com_ryan_anymex
+  github: RyanYuuki/AnymeX
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.ryan.anymex
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Anime
+    license: Unknown
+    source_url: https://github.com/RyanYuuki/AnymeX
+- logical_id: dev_hayase_app
+  github: hayase-app/native
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - dev.hayase.app
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Anime
+    license: Unknown
+    source_url: https://github.com/hayase-app/native
+- logical_id: com_vega
+  github: Zenda-Cross/vega-app
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.vega
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Movies
+    license: Unknown
+    source_url: https://github.com/Zenda-Cross/vega-app
+- logical_id: com_lagradost_cloudstream3
+  github: recloudstream/cloudstream
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.lagradost.cloudstream3
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Movies
+    - Anime
+    license: Unknown
+    source_url: https://github.com/recloudstream/cloudstream
+- logical_id: oss_krtirtho_spotube
+  github: KRTirtho/spotube
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - oss.krtirtho.spotube
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Music
+    license: Unknown
+    source_url: https://github.com/KRTirtho/spotube
+- logical_id: com_maxrave_simpmusic
+  github: maxrave-dev/SimpMusic
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.maxrave.simpmusic
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Music
+    license: Unknown
+    source_url: https://github.com/maxrave-dev/SimpMusic
+- logical_id: dev_brahmkshatriya_echo_nightly
+  github: brahmkshatriya/echo
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - dev.brahmkshatriya.echo.nightly
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Music
+    license: Unknown
+    source_url: https://github.com/brahmkshatriya/echo
+- logical_id: id_nhasix_app
+  github: shirokun20/nhasixapp
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - id.nhasix.app
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - NSFW
+    license: Unknown
+    source_url: https://github.com/shirokun20/nhasixapp
+- logical_id: com_nhapp_android
+  github: e18lab/NHAppAndroid
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.nhapp.android
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - NSFW
+    license: Unknown
+    source_url: https://github.com/e18lab/NHAppAndroid
+- logical_id: is_xyz_mpv
+  github: mpv-android/mpv-android
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - is.xyz.mpv
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Video
+    - Player
+    license: Unknown
+    source_url: https://github.com/mpv-android/mpv-android
+- logical_id: org_thoughtcrime_securesms
+  github: signalapp/Signal-Android
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - org.thoughtcrime.securesms
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Communication
+    - Messaging
+    license: Unknown
+    source_url: https://github.com/signalapp/Signal-Android
+- logical_id: org_joinmastodon_android
+  github: mastodon/mastodon-android
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - org.joinmastodon.android
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Communication
+    - Social
+    license: Unknown
+    source_url: https://github.com/mastodon/mastodon-android
+- logical_id: im_vector_app_android_x
+  github: element-hq/element-x-android
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - im.vector.app.android.x
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Communication
+    - Messaging
+    license: Unknown
+    source_url: https://github.com/element-hq/element-x-android
+- logical_id: io_github_stardomains3_oxproxion
+  github: stardomains3/oxproxion
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - io.github.stardomains3.oxproxion
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Communication
+    - AI
+    - Chat
+    license: Unknown
+    source_url: https://github.com/stardomains3/oxproxion
+- logical_id: jp_nonbili_nora
+  github: nonbili/Nora
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - jp.nonbili.nora
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Social
+    license: Unknown
+    source_url: https://github.com/nonbili/Nora
+- logical_id: de_felixnuesse_extract
+  github: newhinton/Round-Sync
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - de.felixnuesse.extract
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Backup
+    license: Unknown
+    source_url: https://github.com/newhinton/Round-Sync
+- logical_id: juloo_keyboard2
+  github: Julow/Unexpected-Keyboard
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - juloo.keyboard2
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Input
+    license: Unknown
+    source_url: https://github.com/Julow/Unexpected-Keyboard
+- logical_id: com_stratumauth_app
+  github: stratumauth/app
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.stratumauth.app
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Security
+    - 2FA
+    license: Unknown
+    source_url: https://github.com/stratumauth/app
+- logical_id: com_my_kizzy
+  github: dead8309/Kizzy
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.my.kizzy
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Misc
+    license: Unknown
+    source_url: https://github.com/dead8309/Kizzy
+- logical_id: com_foxdebug_acodefree
+  github: Acode-Foundation/Acode
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.foxdebug.acodefree
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - Editor
+    license: Unknown
+    source_url: https://github.com/Acode-Foundation/Acode
+- logical_id: in_hridayan_ashell
+  github: DP-Hridayan/aShellYou
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - in.hridayan.ashell
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Utility
+    license: Unknown
+    source_url: https://github.com/DP-Hridayan/aShellYou
+- logical_id: me_biplobsd_rsm
+  github: biplobsd/running_services_monitor
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - me.biplobsd.rsm
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Utility
+    license: Unknown
+    source_url: https://github.com/biplobsd/running_services_monitor
+- logical_id: io_github_samolego_canta
+  github: samolego/Canta
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - io.github.samolego.canta
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Utility
+    license: Unknown
+    source_url: https://github.com/samolego/Canta
+- logical_id: ru_playsoftware_j2meloader
+  github: nikita36078/J2ME-Loader
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - ru.playsoftware.j2meloader
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Gaming
+    - Emulator
+    license: Unknown
+    source_url: https://github.com/nikita36078/J2ME-Loader
+- logical_id: com_gaurav_avnc
+  github: gujjwal00/avnc
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.gaurav.avnc
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Remote
+    license: Unknown
+    source_url: https://github.com/gujjwal00/avnc
+- logical_id: com_klinker_android_send_message
+  github: octoshrimpy/quik
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.klinker.android.send_message
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Communication
+    - Messaging
+    license: Unknown
+    source_url: https://github.com/octoshrimpy/quik
+- logical_id: de_mm20_launcher2_release
+  github: MM2-0/Kvaesitso
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - de.mm20.launcher2.release
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Launcher
+    license: Unknown
+    source_url: https://github.com/MM2-0/Kvaesitso
+- logical_id: exa_lnx_a
+  github: EXALAB/AnLinux-App
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - exa.lnx.a
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Utility
+    license: Unknown
+    source_url: https://github.com/EXALAB/AnLinux-App
+- logical_id: com_felix_diohub
+  github: NamanShergill/diohub
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.felix.diohub
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Development
+    - GitHubClient
+    license: Unknown
+    source_url: https://github.com/NamanShergill/diohub
+- logical_id: app_marlboroadvance_mpvex
+  github: marlboro-advance/mpvEx
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - app.marlboroadvance.mpvex
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Entertainment
+    - Video
+    - Player
+    license: Unknown
+    source_url: https://github.com/marlboro-advance/mpvEx
+- logical_id: app_revenge_manager
+  github: revenge-mod/revenge-manager
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - app.revenge.manager
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - System
+    - Utility
+    license: Unknown
+    source_url: https://github.com/revenge-mod/revenge-manager
+- logical_id: xyz_jmir_tachiyomi_mi
+  github: aniyomiorg/aniyomi
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - xyz.jmir.tachiyomi.mi
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Manga
+    - Anime
+    license: Unknown
+    source_url: https://github.com/aniyomiorg/aniyomi
+- logical_id: eu_kanade_tachiyomiJ2K
+  github: Jays2Kings/tachiyomiJ2K
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - eu.kanade.tachiyomiJ2K
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Manga
+    license: Unknown
+    source_url: https://github.com/Jays2Kings/tachiyomiJ2K
+- logical_id: xyz_Quickdev_Animiru_mi
+  github: quickdesh/Animiru
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - xyz.Quickdev.Animiru.mi
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Anime
+    license: Unknown
+    source_url: https://github.com/quickdesh/Animiru
+- logical_id: com_kodjodevf_mangayomi
+  github: kodjodevf/mangayomi
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.kodjodevf.mangayomi
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Manga
+    - Anime
+    license: Unknown
+    source_url: https://github.com/kodjodevf/mangayomi
+- logical_id: app_komikku
+  github: komikku-app/komikku
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - app.komikku
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Manga
+    license: Unknown
+    source_url: https://github.com/komikku-app/komikku
+- logical_id: org_nubesurrealista_kumo
+  github: nubesurrealista/Kumo
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - org.nubesurrealista.kumo
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Manga
+    license: Unknown
+    source_url: https://github.com/nubesurrealista/Kumo
+- logical_id: app_kotatsu_redo
+  github: Kotatsu-Redo/Kotatsu-Redo
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - app.kotatsu.redo
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Manga
+    license: Unknown
+    source_url: https://github.com/Kotatsu-Redo/Kotatsu-Redo
+- logical_id: my_noveldokusha
+  github: nanihadesuka/NovelDokusha
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - my.noveldokusha
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Novels
+    license: Unknown
+    source_url: https://github.com/nanihadesuka/NovelDokusha
+- logical_id: com_anxcye_anx_reader
+  github: Anxcye/anx-reader
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.anxcye.anx_reader
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Books
+    license: Unknown
+    source_url: https://github.com/Anxcye/anx-reader
+- logical_id: net_kdt_pojavlaunch_zh
+  github: PojavLauncherTeam/PojavZenithHorizon
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - net.kdt.pojavlaunch.zh
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Gaming
+    - Minecraft
+    license: Unknown
+    source_url: https://github.com/PojavLauncherTeam/PojavZenithHorizon
+- logical_id: io_github_readest_readest
+  github: readest/readest
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - io.github.readest.readest
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Books
+    license: Unknown
+    source_url: https://github.com/readest/readest
+- logical_id: xxxb_xxxb_pirna800
+  github: xxxb-g/Pirna800Android
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - xxxb.xxxb.pirna800
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 2
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - unsigned
+    - x86
+    - x86_64
+  metadata:
+    categories:
+    - Nature
+    license: Unknown
+    source_url: https://github.com/xxxb-g/Pirna800Android

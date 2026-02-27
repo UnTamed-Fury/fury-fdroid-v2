@@ -1,0 +1,42 @@
+# Test configuration with minimal apps for CI testing
+# Full configuration is in apps.yaml
+
+repo:
+  name:
+    en-US: Fury F-Droid Repo (Test)
+  description:
+    en-US: Test repository with minimal apps
+  url: https://untamed-fury.github.io/fury-fdroid-v2
+  icon: /icons/icon.png
+  max_versions_default: 1
+
+apps:
+# Termux - small, reliable APK
+- logical_id: com_termux_test
+  github: termux/termux-app
+  release:
+    prefer_prerelease: false
+    include_prerelease_if_no_stable: true
+    ignore_drafts: true
+  package:
+    allowed_ids:
+    - com.termux
+    allow_pkg_change: false
+  signature:
+    allowed_fingerprints: []
+    allow_signature_change: false
+  abi_policy: arm_preferred
+  retention:
+    retain_versions: 1
+  asset_filter:
+    include_keywords: []
+    exclude_keywords:
+    - debug
+    - x86
+  metadata:
+    categories:
+    - Development
+    - Terminal
+    license: GPL-3.0-only
+    source_url: https://github.com/termux/termux-app
+    issue_tracker: https://github.com/termux/termux-app/issues
