@@ -107,8 +107,23 @@ def extract_apk_metadata(file_path: str) -> dict[str, Any]:
     for perm in apk.get_permissions():
         permissions.append({"name": perm})
 
-    # Extract native code ABIs
-    native_code = apk.get_native_code() or []
+    # Extract native code ABIs (androguard 4.x doesn't have get_native_code())
+    native_code = []
+    try:
+        # Try androguard 4.x method first
+        if hasattr(apk, 'get_native_code'):
+            native_code = apk.get_native_code() or []
+        else:
+            # Fallback: parse lib/ directory for androguard 4.x
+            abis = set()
+            for filename in getattr(apk, 'get_files', lambda: [])():
+                if filename.startswith('lib/'):
+                    parts = filename.split('/')
+                    if len(parts) >= 2:
+                        abis.add(parts[1])
+            native_code = list(abis)
+    except Exception:
+        pass
 
     # Extract signing certificate
     signing_cert = None
