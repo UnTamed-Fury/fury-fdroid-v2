@@ -13,11 +13,19 @@ Automated ARM-only F-Droid repository powered by GitHub Actions.
 
 ## Repository URL
 
+**Public hosting (when repo is public):**
 ```
 https://untamed-fury.github.io/fury-fdroid-v2
 ```
 
-Add this to your F-Droid client or Aurora Store.
+**Direct from GitHub (works for private repos):**
+```
+https://raw.githubusercontent.com/UnTamed-Fury/fury-fdroid-v2/gh-pages/index-v2.json
+```
+
+Add the URL to your F-Droid client or Aurora Store.
+
+> **Note:** GitHub Pages requires a public repo on the free plan. For private repos, use the raw.githubusercontent.com URL or make the repo public.
 
 ## Directory Structure
 
