@@ -71,16 +71,7 @@ jobs:
             python3 -c "import json; d=json.load(open('repo/index-v2.json')); print(f'Packages: {len(d.get(\"packages\", {}))}')"
           fi
 
-      - name: Deploy to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./repo
-          keep_files: false
-          force_orphan: true
-          branch: gh-pages
-
-      - name: Commit changes to main branch
+      - name: Commit and push to main branch
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
