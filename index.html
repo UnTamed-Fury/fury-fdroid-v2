@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fury F-Droid Repository</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8892b0;
+            margin-bottom: 2rem;
+        }
+        .repo-url {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .repo-url code {
+            display: block;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            color: #00ff88;
+            word-break: break-all;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .feature {
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .feature h3 {
+            color: #00d9ff;
+            margin-bottom: 0.5rem;
+        }
+        .feature p {
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(90deg, #00d9ff, #00ff88);
+            color: #1a1a2e;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #00d9ff;
+            color: #00d9ff;
+        }
+        footer {
+            margin-top: 3rem;
+            color: #8892b0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔥 Fury F-Droid Repository</h1>
+        <p class="subtitle">Automated ARM-only F-Droid repository for Android apps</p>
+        
+        <div class="repo-url">
+            <p style="margin-bottom: 0.5rem; color: #8892b0;">Repository URL:</p>
+            <code>https://UnTamed-Fury.github.io/fury-fdroid-v2/repo</code>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>📦 34+ Apps</h3>
+                <p>Popular open-source Android apps</p>
+            </div>
+            <div class="feature">
+                <h3>🔄 Auto-Update</h3>
+                <p>Updates every 6 hours</p>
+            </div>
+            <div class="feature">
+                <h3>💪 ARM Only</h3>
+                <p>Optimized for ARM devices</p>
+            </div>
+            <div class="feature">
+                <h3>🔒 Verified</h3>
+                <p>All APKs from GitHub Releases</p>
+            </div>
+        </div>
+        
+        <div>
+            <a href="repo/index-v2.json" class="btn">View index-v2.json</a>
+            <a href="https://github.com/UnTamed-Fury/fury-fdroid-v2" class="btn btn-secondary">GitHub Repo</a>
+        </div>
+        
+        <footer>
+            <p>Built with GitHub Actions • Updates every 6 hours</p>
+        </footer>
+    </div>
+</body>
+</html>

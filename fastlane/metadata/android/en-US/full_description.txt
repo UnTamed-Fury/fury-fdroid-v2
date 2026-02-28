@@ -1,69 +1,12 @@
-# Fury F-Droid Repository
+Fury F-Droid Repository is an automated, ARM-only F-Droid repository.
 
-Fury F-Droid Repo is an automated, ARM-only F-Droid repository that provides easy access to popular Android apps optimized for ARM devices.
+Features:
+- 34+ popular open-source Android apps
+- Auto-updates every 6 hours
+- ARM-only builds (arm64-v8a, armeabi-v7a)
+- All APKs from official GitHub Releases
+- No x86 builds - optimized for mobile devices
 
-## Features
+Apps include Mihon, Anikku, Termux, Obtainium, Neo Store, Droid-ify, CloudStream, Mastodon, MPV and many more!
 
-- **ARM-Only Builds**: All APKs are filtered to include only arm64-v8a and armeabi-v7a architectures
-- **Automated Updates**: Repository updates every 6 hours via GitHub Actions
-- **60+ Apps**: Pre-configured with popular apps from GitHub Releases
-- **Signature Pinning**: Prevents silent signing key changes for security
-- **Version Retention**: Keeps only the latest 2 versions per app
-- **No x86 Builds**: Explicitly filters out x86 and x86_64 architectures
-
-## How to Add This Repository
-
-### F-Droid Client
-
-1. Open F-Droid or Droid-ify
-2. Go to Settings → Repositories
-3. Add new repository with URL:
-   ```
-   https://raw.githubusercontent.com/UnTamed-Fury/fury-fdroid-v2/gh-pages/index-v2.json
-   ```
-4. Update repository list
-
-### Aurora Store
-
-1. Open Aurora Store
-2. Go to Settings → F-Droid Repositories
-3. Add the repository URL above
-4. Refresh
-
-## Repository Statistics
-
-- **Total Apps**: 60+
-- **Update Frequency**: Every 6 hours
-- **Architecture**: ARM64-v8a, ARMeabi-v7a only
-- **Hosting**: GitHub Pages
-- **License**: Various (per-app)
-
-## App Categories
-
-- Development & Terminal
-- Gaming & Emulators
-- Media & Entertainment
-- Internet & Social
-- Utilities & Tools
-- Privacy & Security
-
-## Technical Details
-
-This repository is built using:
-- Python 3.11
-- GitHub Actions for automation
-- androguard for APK metadata extraction
-- Custom scripts for GitHub Releases fetching
-
-## Support
-
-- **Issues**: https://github.com/UnTamed-Fury/fury-fdroid-v2/issues
-- **Source**: https://github.com/UnTamed-Fury/fury-fdroid-v2
-- **Documentation**: https://github.com/UnTamed-Fury/fury-fdroid-v2/blob/main/README.md
-
-## Notes
-
-- This repository does not host APK files directly
-- All APKs are downloaded from their original GitHub Releases
-- Repository only stores metadata and links to upstream releases
-- For private repos, use the raw.githubusercontent.com URL
+Repository URL: https://UnTamed-Fury.github.io/fury-fdroid-v2/repo

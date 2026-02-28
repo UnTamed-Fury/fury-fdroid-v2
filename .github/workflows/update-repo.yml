@@ -63,10 +63,21 @@ jobs:
           mkdir -p repo/icons
           python scripts/main.py 2>&1 | tee build.log
           echo "=== Build Complete ==="
+
+      - name: Prepare deployment
+        run: |
+          # Create deployment directory structure
+          mkdir -p deploy/repo
           
-          # Copy to root for GitHub Pages (serves from root of main branch)
-          cp repo/index-v2.json .
-          cp repo/index-v1.json .
+          # Copy repo contents (preserves /repo path)
+          cp -r repo/* deploy/repo/
+          
+          # Copy landing page
+          cp index.html deploy/
+          
+          echo "=== Deployment Structure ==="
+          ls -la deploy/
+          ls -la deploy/repo/
 
       - name: Show generated files
         run: |
@@ -80,7 +91,7 @@ jobs:
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./repo
+          path: ./deploy
 
       - name: Deploy to GitHub Pages
         id: deployment
