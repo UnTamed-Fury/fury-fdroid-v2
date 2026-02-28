@@ -61,6 +61,10 @@ jobs:
           mkdir -p repo/icons
           python scripts/main.py 2>&1 | tee build.log
           echo "=== Build Complete ==="
+          
+          # Copy to root for GitHub Pages (serves from root of main branch)
+          cp repo/index-v2.json .
+          cp repo/index-v1.json .
 
       - name: Show generated files
         run: |
@@ -75,7 +79,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add repo/
+          git add repo/ index-v2.json index-v1.json
           if ! git diff --staged --quiet; then
             git commit -m "chore: update F-Droid repo index [skip ci]"
             git push
