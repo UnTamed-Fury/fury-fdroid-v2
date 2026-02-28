@@ -20,6 +20,7 @@ def build_repo_object(
     description: dict[str, str],
     url: str,
     icon: Optional[str] = None,
+    categories: Optional[dict[str, Any]] = None,
 ) -> dict[str, Any]:
     """
     Build the repo object for index-v2.json.
@@ -29,6 +30,7 @@ def build_repo_object(
         description: Localized description dict
         url: Repository URL
         icon: Icon URL (optional)
+        categories: Categories dict (optional, for F-Droid compatibility)
 
     Returns:
         Repo object dictionary
@@ -42,6 +44,9 @@ def build_repo_object(
 
     if icon:
         repo["icon"] = icon
+    
+    if categories:
+        repo["categories"] = categories
 
     return repo
 
