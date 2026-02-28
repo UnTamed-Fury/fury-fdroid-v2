@@ -220,12 +220,38 @@ def build_index(
     Returns:
         Complete index dictionary
     """
+    # Collect all categories from packages
+
+    all_categories = set()
+
+    for pkg_data in packages_data.values():
+
+        metadata = pkg_data.get('metadata', {})
+
+        for cat in metadata.get('categories', []):
+
+            all_categories.add(cat)
+
+    
+
+    # Build categories dict for F-Droid compatibility
+
+    categories = {}
+
+    for cat in sorted(all_categories):
+
+        categories[cat] = {"name": {"en-US": cat}}
+
+    
+
     index = {
+
         "repo": build_repo_object(
             name=repo_config.get("name", {"en-US": "F-Droid Repo"}),
             description=repo_config.get("description", {"en-US": "F-Droid Repository"}),
             url=repo_config.get("url", ""),
             icon=repo_config.get("icon"),
+            categories=categories if categories else None,
         ),
         "packages": packages_data,
     }
