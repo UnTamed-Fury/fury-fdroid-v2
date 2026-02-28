@@ -64,6 +64,11 @@ jobs:
           python scripts/main.py 2>&1 | tee build.log
           echo "=== Build Complete ==="
 
+      - name: Create index-v1.jar
+        run: |
+          echo "=== Creating index-v1.jar ==="
+          python3 scripts/sign_repo.py
+
       - name: Prepare deployment
         run: |
           # Create deployment directory structure
