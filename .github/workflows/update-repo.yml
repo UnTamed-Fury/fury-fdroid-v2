@@ -1,8 +1,9 @@
 name: Update F-Droid Repo
 
 on:
-  schedule:
-    - cron: '0 */6 * * *'  # Run every 6 hours
+# Stopping these cuz I dont think this is a good one setup for this repo
+#  schedule:
+#    - cron: '0 */6 * * *'  # Run every 6 hours
   workflow_dispatch:  # Allow manual trigger
   push:
     branches: [main]
